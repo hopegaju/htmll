@@ -3,53 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <style>
-             body{
-                background:linear-gradient(rgb(143, 197, 248),rgb(228, 157, 228));
-                height: 97.5vh;
-            }
-            label{
-                display: inline-block;
-                width: 150px;
-                margin-left: 10px;
-            }
-            .well{
-                display: inline-block;
-                width: 150px;
-            }
-            .form{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        </style>
-    </head>
-    <body class="form">
-        <div>
-            <h1>HTML Form</h1>
-            <label for="firstname">firstname</label>
-            <input type="text"><br><br>
-            <label for="lastname">Lastname</label>
-            <input type="text"><br><br>
-            <label for="date">date of birth</label>
-            <input type="date" name="date" id=""><br><br>
-            <label for="Email">Email Id</label>
-            <input type="text" name="" id=""><br><br>
-            <label for="mobile">Mobile number</label>
-            <input type="number" name="number" id=""><br><br>
-            <input type="button" value="submit" class="well">
-            <input type="reset" value="reset" class="well"><br><br>
-            <a href="main.html"><button>Go to page main</button></a>
-    
-        </div>
-    </body>
-    </html>
+    <title>Hotel Feedback Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <!-- Page Title -->
+        <h1 id="title">Hotel Feedback Form</h1>
+        <!-- Short Explanation -->
+        <p id="description">We value your feedback! Please share your experience staying with us.</p>
+
+        <!-- Form Element -->
+        <form id="survey-form">
+            <!-- Name Input Field -->
+            <label id="name-label" for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+
+            <!-- Email Input Field -->
+            <label id="email-label" for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+
+            <!-- Number Input Field -->
+            <label id="number-label" for="number">Number of Nights Stayed:</label>
+            <input type="number" id="number" name="nights" placeholder="Enter number of nights" min="1" max="30" required><br>
+
+            <!-- Dropdown -->
+            <label for="dropdown">What was the purpose of your stay?</label>
+            <select id="dropdown" name="purpose" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="business">Business</option>
+                <option value="vacation">Vacation</option>
+                <option value="other">Other</option>
+            </select><br>
+
+            <!-- Radio Buttons -->
+            <p>How would you rate your overall experience?</p>
+            <input type="radio" id="excellent" name="rating" value="excellent" required>
+            <label for="excellent">Excellent</label><br>
+            <input type="radio" id="good" name="rating" value="good">
+            <label for="good">Good</label><br>
+            <input type="radio" id="average" name="rating" value="average">
+            <label for="average">Average</label><br>
+            <input type="radio" id="poor" name="rating" value="poor">
+            <label for="poor">Poor</label><br>
+
+            <!-- Checkboxes -->
+            <p>What amenities did you enjoy during your stay? (Select all that apply)</p>
+            <input type="checkbox" id="wifi" name="amenities" value="wifi">
+            <label for="wifi">WiFi</label><br>
+            <input type="checkbox" id="pool" name="amenities" value="pool">
+            <label for="pool">Swimming Pool</label><br>
+            <input type="checkbox" id="spa" name="amenities" value="spa">
+            <label for="spa">Spa</label><br>
+            <input type="checkbox" id="restaurant" name="amenities" value="restaurant">
+            <label for="restaurant">Restaurant</label><br>
+
+            <!-- Textarea -->
+            <label for="comments">Additional comments or suggestions:</label><br>
+            <textarea id="comments" name="comments" placeholder="Write your feedback here..." rows="4"></textarea><br>
+
+            <!-- Submit Button -->
+            <button id="submit" type="submit">Submit Feedback</button>
+        </form>
+    </main>
 </body>
 </html>
